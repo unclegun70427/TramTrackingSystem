@@ -1,0 +1,93 @@
+- tram
+
+[
+  {
+      "_id": {
+        "$oid": "5fc4b0200cd81e32d45defd7"
+      }, //example
+      "name" : "r001",
+      "line" : "red",
+      "status" : 1, // 1-running 2-parking 3-offline
+      "address" : {
+          "latitude" : 137.1561,
+          "longtitude" : 47.4952
+      },
+
+  },{
+    ...
+  }
+]
+
+- place
+[
+  {
+    "_id" : ObjectID("16sg79da454dd45esdaa54e"),
+    "name" : "ตึกแดง คณะวิศวกรรมศาสตร์",
+    "address" : {
+        "latitude" : 137.2373,
+        "longtitude" : 47.7537
+    },
+    "picture" : "red_EG.png",
+    "station" : "ป้าย EG"
+  },{
+    ...
+  }
+]
+
+- station
+
+[
+  {
+    "_id": {
+      "$oid": "5fc4b0200cd81e32d45defd7"
+    },
+    "name" : "ป้าย EG",
+    "address" : {
+        "latitude" : 137.2373,
+        "longtitude" : 47.7537
+    },
+    "address_on_route" : {
+        "latitude" : 137.2456,
+        "longtitude" : 47.7467
+    },
+    "picture" : "EG_station.png"
+  }
+]
+
+- route
+
+[
+  {
+    "_id": {
+      "$oid": "5fc4b0200cd81e32d45defd7"
+    },
+    "line" : "red",
+    "roads_Inspector" : "33.870315151.196532|33.869979,151.197355|33.870044,151.197712|-33.870358,151.198206|33.870595,151.198376|-33.870640,151.198398|33.870620,151.198449|-33.870951,151.198525|33.871040,151.198528|33.872031,151.198413",
+    "pass_station" : [
+        "บ้านมหิดล",
+        "สวนเจ้าฟ้า",
+        "คณะวิทย์",
+        "ลานมหิดล",
+        ...
+    ]
+  },{
+    ... // blue, green and yellow
+  }
+]
+
+- driver
+
+[
+  {
+    "_id": {
+      "$oid": "5fc4b0200cd81e32d45defd7"
+    },
+    "firstname": "A",
+    "lastname": "B",
+    "gender": "Female",
+    "status" : "1", 1-driving 2-online 3-offline
+    "bus_drive" : "r001"
+  },{
+    ...
+  }
+]
